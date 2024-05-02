@@ -640,7 +640,7 @@ def _validate_label(label, allowed_labels):
         if not label[1] in allowed_labels:
             raise ScaperError(
                 'Label value must match one of the available labels: '
-                '{:s}'.format(str(allowed_labels)))
+                '{:s}'.format(str(allowed_labels),"label 0", label[0],"label 1", label[1]))
     elif label[0] == "choose" or label[0] == "choose_weighted":
         if label[1]:  # list is not empty
             if not set(label[1]).issubset(set(allowed_labels)):
